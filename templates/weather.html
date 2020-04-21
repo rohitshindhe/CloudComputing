@@ -34,6 +34,12 @@
                                 </button>
                             </div>
                         </div>
+
+                      
+                                <div class="notification {{ message_class }}">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {% endwith %}
                     </form>
                 </div>
             </div>
@@ -51,6 +57,7 @@
                                     <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
                                 </figure>
                             </div>
+
                             <div class="media-content">
                                 <div class="content">
                                     <p>
@@ -60,6 +67,12 @@
                                         <br> {{ weather.description }}
                                     </p>
                                 </div>
+                            </div>
+
+                            <div class="media-right">
+                                <a href="{{ url_for('delete_city', name=weather.city) }}">
+                                    <button class="delete"></button>
+                                </a>
                             </div>
                         </article>
                     </div>
@@ -71,5 +84,4 @@
     <footer class="footer">
     </footer>
 </body>
-
 </html>
