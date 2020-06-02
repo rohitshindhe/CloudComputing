@@ -2,12 +2,24 @@
 
 import libraries as below:
 
+
 from enum import unique
+
+
 import requests
+
+
 from django.template.defaultfilters import upper
+
+
 from flask import Flask, render_template, request, redirect, url_for, flash
+
+
 from flask_sqlalchemy import SQLAlchemy
+
+
 from OpenSSL import SSL
+
 
 (ssl_context='adhoc' -----> http to https)
 
